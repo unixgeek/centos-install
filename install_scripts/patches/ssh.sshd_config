@@ -1,0 +1,12 @@
+--- template64/etc/ssh/sshd_config	2009-12-15 06:57:59.000000000 -0600
++++ template32/etc/ssh/sshd_config	2010-01-22 13:24:06.000000000 -0600
+@@ -36,7 +36,7 @@
+ # Authentication:
+ 
+ #LoginGraceTime 2m
+-#PermitRootLogin yes
++PermitRootLogin no
+ #StrictModes yes
+ #MaxAuthTries 6
+ 
+

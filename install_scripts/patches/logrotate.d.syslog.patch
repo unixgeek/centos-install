@@ -1,0 +1,8 @@
+--- template64/etc/logrotate.d/syslog	2008-05-22 18:12:09.000000000 -0500
++++ template32/etc/logrotate.d/syslog	2009-09-09 10:44:30.000000000 -0500
+@@ -1,4 +1,4 @@
+-/var/log/messages /var/log/secure /var/log/maillog /var/log/spooler /var/log/boot.log /var/log/cron {
++/var/log/auth.log /var/log/authpriv.log /var/log/cron.log /var/log/daemon.log /var/log/kern.log /var/log/lpr.log /var/log/mail.log /var/log/news.log /var/log/syslog.log /var/log/user.log /var/log/uucp.log /var/log/local.log /var/log/boot.log {
+     sharedscripts
+     postrotate
+ 	/bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true

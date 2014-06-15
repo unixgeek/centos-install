@@ -1,0 +1,18 @@
+--- /etc/profile.orig	2010-07-29 10:57:22.000000000 -0500
++++ /etc/profile	2014-03-08 20:46:00.000000000 -0600
+@@ -13,12 +13,9 @@
+ 	fi
+ }
+ 
+-# Path manipulation
+-if [ `id -u` = 0 ]; then
+-	pathmunge /sbin
+-	pathmunge /usr/sbin
+-	pathmunge /usr/local/sbin
+-fi
++pathmunge /sbin
++pathmunge /usr/sbin
++pathmunge /usr/local/sbin
+ 
+ pathmunge /usr/X11R6/bin after
+ 

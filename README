@@ -1,0 +1,9 @@
+Start the kickstart configuration.
+linux ks=cdrom1:/ks.cfg
+
+Update and configure system.
+./0-delete-rpms.sh - hit y if you see no errors
+./1-update-rpms.sh
+./2-install-rpms.sh
+./3-configure.sh
+

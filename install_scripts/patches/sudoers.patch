@@ -1,0 +1,11 @@
+--- /etc/sudoers.orig	2009-06-01 11:58:12.000000000 -0500
++++ /etc/sudoers	2014-03-08 20:59:03.000000000 -0600
+@@ -17,7 +17,7 @@
+ root	ALL=(ALL) ALL
+ 
+ # Uncomment to allow people in group wheel to run all commands
+-# %wheel	ALL=(ALL)	ALL
++%wheel	ALL=(ALL)	ALL
+ 
+ # Same thing without a password
+ # %wheel	ALL=(ALL)	NOPASSWD: ALL
