@@ -1,11 +1,12 @@
---- /etc/sudoers.orig	2009-06-01 11:58:12.000000000 -0500
-+++ /etc/sudoers	2014-03-08 20:59:03.000000000 -0600
-@@ -17,7 +17,7 @@
- root	ALL=(ALL) ALL
+--- template64/etc/sudoers	2009-07-02 15:54:15.000000000 -0500
++++ template32/etc/sudoers	2009-08-04 09:31:04.000000000 -0500
+@@ -80,7 +80,7 @@
+ # %sys ALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS
  
- # Uncomment to allow people in group wheel to run all commands
+ ## Allows people in group wheel to run all commands
 -# %wheel	ALL=(ALL)	ALL
 +%wheel	ALL=(ALL)	ALL
  
- # Same thing without a password
+ ## Same thing without a password
  # %wheel	ALL=(ALL)	NOPASSWD: ALL
+

@@ -1,11 +1,11 @@
---- /etc/profile.orig	2010-07-29 10:57:22.000000000 -0500
-+++ /etc/profile	2014-03-08 20:46:00.000000000 -0600
-@@ -13,12 +13,9 @@
- 	fi
- }
+--- template64/etc/profile	2009-07-02 15:41:15.000000000 -0500
++++ template32/etc/profile	2009-09-04 06:13:12.000000000 -0500
+@@ -19,12 +19,9 @@
+ 	UID=`id -ru`
+ fi
  
 -# Path manipulation
--if [ `id -u` = 0 ]; then
+-if [ "$EUID" = "0" ]; then
 -	pathmunge /sbin
 -	pathmunge /usr/sbin
 -	pathmunge /usr/local/sbin
@@ -14,5 +14,5 @@
 +pathmunge /usr/sbin
 +pathmunge /usr/local/sbin
  
- pathmunge /usr/X11R6/bin after
- 
+ # No core files by default
+ ulimit -S -c 0 > /dev/null 2>&1
