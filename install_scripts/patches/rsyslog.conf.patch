@@ -1,0 +1,55 @@
+--- /etc/rsyslog.conf.bak	2014-06-18 21:55:49.646235662 -0500
++++ /etc/rsyslog.conf	2014-06-18 21:57:32.018218071 -0500
+@@ -33,33 +33,25 @@
+ 
+ #### RULES ####
+ 
+-# Log all kernel messages to the console.
+-# Logging much else clutters up the screen.
+-#kern.*                                                 /dev/console
+-
+-# Log anything (except mail) of level info or higher.
+-# Don't log private authentication messages!
+-*.info;mail.none;authpriv.none;cron.none                /var/log/messages
+-
+-# The authpriv file has restricted access.
+-authpriv.*                                              /var/log/secure
+-
+-# Log all the mail messages in one place.
+-mail.*                                                  -/var/log/maillog
+-
+-
+-# Log cron stuff
+-cron.*                                                  /var/log/cron
+-
+-# Everybody gets emergency messages
+-*.emerg                                                 *
+-
+-# Save news errors of level crit and higher in a special file.
+-uucp,news.crit                                          /var/log/spooler
+-
+-# Save boot messages also to boot.log
+-local7.*                                                /var/log/boot.log
+-
++auth.*          /var/log/auth.log
++authpriv.*      /var/log/authpriv.log
++cron.*          /var/log/cron.log
++daemon.*        /var/log/daemon.log
++kern.*          /var/log/kern.log
++lpr.*           /var/log/lpr.log
++mail.*          /var/log/mail.log
++news.*          /var/log/news.log
++syslog.*        /var/log/syslog.log
++user.*          /var/log/user.log
++uucp.*          /var/log/uucp.log
++local0.*        /var/log/local.log
++local1.*        /var/log/local.log
++local2.*        /var/log/local.log
++local3.*        /var/log/rep_populate.log
++local4.*        /var/log/local.log
++local5.*        /var/log/local.log
++local6.*        /var/log/local.log
++local7.*        /var/log/boot.log
+ 
+ # ### begin forwarding rule ###
+ # The statement between the begin ... end define a SINGLE forwarding

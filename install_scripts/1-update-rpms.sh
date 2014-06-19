@@ -3,6 +3,6 @@
 # Upgrade the system.
 #
 
-rpm -ivh rpmforge-release-0.5.3-1.el5.rf.$(uname -i).rpm || exit 1
+rpm -ivh rpmforge-release-0.5.3-1.el6.rf.$(uname -m).rpm || exit 1
 
 yum -y update

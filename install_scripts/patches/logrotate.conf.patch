@@ -1,11 +1,7 @@
---- template64/etc/logrotate.conf	2008-10-31 14:56:36.000000000 -0500
-+++ template32/etc/logrotate.conf	2009-08-04 15:40:38.000000000 -0500
-@@ -6,10 +6,16 @@
- rotate 4
- 
- # create new (empty) log files after rotating old ones
--create
-+create 0640 root wheel
+--- /etc/logrotate.conf.orig	2007-08-29 02:19:36.000000000 -0500
++++ /etc/logrotate.conf	2012-02-04 15:05:45.223379489 -0600
+@@ -12,7 +12,10 @@
+ dateext
  
  # uncomment this if you want your log files compressed
 -#compress
@@ -13,9 +9,14 @@
 +
 +# rotate old log files to one directory
 +olddir /var/log/rotated
-+
-+# don't mail the logs to anyone
-+nomail
  
  # RPM packages drop log rotation information into this directory
  include /etc/logrotate.d
+@@ -21,7 +24,6 @@
+ /var/log/wtmp {
+     monthly
+     create 0664 root utmp
+-	minsize 1M
+     rotate 1
+ }
+ 
